@@ -1,17 +1,18 @@
 package guru.springframework.didemo.controllers;
 
-import guru.springframework.didemo.services.GreetingService;
-import guru.springframework.didemo.services.interfaces.IGreetingService;
+import guru.springframework.didemo.services.GreetingServiceImpl;
+import guru.springframework.didemo.services.interfaces.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class SetterInjectedController {
 
-    private IGreetingService greetingService;
+    @Autowired
+    private GreetingService greetingService;
 
     public String sayHello(){
         return greetingService.sayHello();
     }
 
-    public void setGreetingService(GreetingService greetingService) {
-        this.greetingService = greetingService;
-    }
 }

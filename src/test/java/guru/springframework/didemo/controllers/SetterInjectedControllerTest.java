@@ -1,6 +1,6 @@
 package guru.springframework.didemo.controllers;
 
-import guru.springframework.didemo.services.GreetingService;
+import guru.springframework.didemo.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,11 +13,11 @@ public class SetterInjectedControllerTest {
     @Before
     public void setUp() throws Exception {
         this.setterInjectedController = new SetterInjectedController();
-        this.setterInjectedController.setGreetingService(new GreetingService());
+        //this.setterInjectedController.setGreetingService(new GreetingServiceImpl());
     }
 
     @Test
     public void sayHello() {
-        assertEquals(GreetingService.HI_GUYS, setterInjectedController.sayHello());
+        assertEquals(GreetingServiceImpl.HI_GUYS, setterInjectedController.sayHello());
     }
 }

@@ -1,10 +1,8 @@
 package guru.springframework.didemo.controllers;
 
-import guru.springframework.didemo.services.GreetingService;
+import guru.springframework.didemo.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class ConstructorInjectedControllerTest {
 
@@ -14,7 +12,7 @@ public class ConstructorInjectedControllerTest {
     @Before
     public void setUp() throws Exception {
         // there is no way we create class without injecting service. good practice and most preferred as well
-        this.constructorInjectedController = new ConstructorInjectedController( new GreetingService());
+        // this.constructorInjectedController = new ConstructorInjectedController( new GreetingServiceImpl());
     }
 
     @Test

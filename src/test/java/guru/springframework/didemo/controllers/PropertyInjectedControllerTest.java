@@ -1,11 +1,10 @@
 package guru.springframework.didemo.controllers;
 
-import guru.springframework.didemo.services.GreetingService;
-import guru.springframework.didemo.services.interfaces.IGreetingService;
+import guru.springframework.didemo.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class PropertyInjectedControllerTest {
 
@@ -14,11 +13,11 @@ public class PropertyInjectedControllerTest {
     @Before
     public void setUp() throws Exception {
         this.propertyInjectedController = new PropertyInjectedController();
-        this.propertyInjectedController.greetingService = new GreetingService();
+        this.propertyInjectedController.greetingService = new GreetingServiceImpl();
     }
 
     @Test
     public void sayHello() {
-        assertEquals(GreetingService.HI_GUYS, propertyInjectedController.greetingService.sayHello());
+        assertEquals(GreetingServiceImpl.HI_GUYS, propertyInjectedController.greetingService.sayHello());
     }
 }
