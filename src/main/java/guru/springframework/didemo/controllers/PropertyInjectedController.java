@@ -14,8 +14,17 @@ public class PropertyInjectedController {
     public GreetingServiceImpl greetingService; // we add @service annotation to GreetingService and we managed to autowire
 
     public String sayHello(){
-
         return greetingService.sayHello();
     }
+
+    /*
+     we used interface but named it to match with the class name. Spring uses its reflection and finds the correct service 
+     public GreetingService greetingServiceImpl; // we add @service annotation to GreetingService and we managed to autowire
+
+    public String sayHello(){
+        return greetingServiceImpl.sayHello();
+    }
+
+     */
 
 }
