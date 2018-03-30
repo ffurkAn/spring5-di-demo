@@ -4,8 +4,10 @@ import guru.springframework.didemo.services.interfaces.IGreetingService;
 
 public class GreetingService implements IGreetingService {
 
+    public static final String HI_GUYS = "Hi Guys!!";
+
     @Override
-    public void sayHello() {
-        System.out.println("Hi Guys!!");
+    public String sayHello() {
+        return HI_GUYS;
     }
 }

@@ -1,19 +1,18 @@
 package guru.springframework.didemo.controllers;
 
 import guru.springframework.didemo.services.GreetingService;
+import guru.springframework.didemo.services.interfaces.IGreetingService;
 
 public class PropertyInjectedController {
 
-    // I have property here
-    // its public - WRONG
-    // its the concrete class - WRONG
-    public GreetingService greetingService;
+    // I have property here to intialize it I need to access from this class. bad practice
+    public IGreetingService greetingService;
 
-    public void sayHello(){
-       getGreetingService().sayHello();
+    public String sayHello(){
+       return getGreetingService().sayHello();
     }
 
-    public GreetingService getGreetingService(){
+    public IGreetingService getGreetingService(){
         return greetingService;
     }
 }

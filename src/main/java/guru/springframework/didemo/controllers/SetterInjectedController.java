@@ -1,14 +1,14 @@
 package guru.springframework.didemo.controllers;
 
 import guru.springframework.didemo.services.GreetingService;
+import guru.springframework.didemo.services.interfaces.IGreetingService;
 
 public class SetterInjectedController {
 
-    // its the concrete class - WRONG
-    private GreetingService greetingService;
+    private IGreetingService greetingService;
 
-    public void sayHello(){
-        greetingService.sayHello();
+    public String sayHello(){
+        return greetingService.sayHello();
     }
 
     public void setGreetingService(GreetingService greetingService) {
