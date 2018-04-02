@@ -6,12 +6,13 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
+@Primary
+@Profile("de")
+public class DeutschGreetingService implements GreetingService {
 
-    public static final String HI_GUYS = "Hi Guys!! -- ORIGINAL";
 
     @Override
     public String sayHello() {
-        return HI_GUYS;
+        return "Hallo, Wie geths Du?";
     }
 }
