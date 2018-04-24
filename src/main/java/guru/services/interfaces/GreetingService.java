@@ -1,4 +1,4 @@
-package guru.springframework.didemo.services.interfaces;
+package guru.services.interfaces;
 
 public interface GreetingService {
 

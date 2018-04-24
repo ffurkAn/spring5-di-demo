@@ -1,0 +1,21 @@
+name: Kemal
+
+names:
+  - Furkan
+  - Gokhan
+  - Meltem # this is an inline comment
+
+# yml ignores this line
+
+book:
+    author: Kim
+    publisher: Ben mi?
+
+
+quote_example: "This is a quote"
+
+truth: yes
+
+anotheor_truth: True
+
+is_true: true

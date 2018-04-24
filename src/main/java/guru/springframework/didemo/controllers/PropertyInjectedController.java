@@ -1,7 +1,6 @@
 package guru.springframework.didemo.controllers;
 
-import guru.springframework.didemo.services.GreetingServiceImpl;
-import guru.springframework.didemo.services.interfaces.GreetingService;
+import guru.services.GreetingServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
